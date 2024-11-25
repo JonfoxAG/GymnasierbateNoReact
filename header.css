@@ -1,16 +1,41 @@
 #header {
     background-color: blue;
-    padding: 4rem 70rem 4rem 5rem;
+    padding: 2rem 1rem; /* Default padding for smaller screens */
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for small screens */
+    gap: 1rem; /* Add spacing between items */
+    flex-direction: row; /* Row layout by default */
 }
 
-
 .header-item {
-    display: inline-block;
+    flex: 1; /* Allow items to grow and share space */
+    text-align: center; /* Center the items horizontally */
+    min-width: 120px; /* Ensure items don’t shrink too small */
 }
 
 a {
-    text-decoration:none;
+    text-decoration: none;
     color: black;
+}
+
+/* When there's enough space, keep row layout but shrink padding */
+@media (max-width: 768px) {
+    #header {
+        padding: 1rem; /* Reduce padding on smaller screens */
+    }
+}
+
+/* Switch to column layout when the screen is very narrow */
+@media (max-width: 600px) {
+    #header {
+        flex-direction: column; /* Change to column layout */
+        align-items: flex-start; /* Align items to the left in column view */
+    }
+
+    .header-item {
+        flex: unset; /* Remove flex-grow to avoid stretching in column layout */
+        width: 100%; /* Ensure items take full width */
+    }
 }
