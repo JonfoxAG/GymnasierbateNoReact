@@ -10,19 +10,18 @@ footer {
 
 .half1 {
     display: inline-block;
-    height: 100%;
     width: 50%;
-    padding: 2rem 0 0 2rem
+    padding: 2rem 0 0 2rem;
+    overflow: hidden;
 }
 
 .half2 {
     display: inline-block;
-    height: 100%;
     width: 50%;
-    padding: 2rem 0 0 2rem
+    padding: 2rem 0 0 2rem;
+    overflow: hidden;
 }
 
 .footer-items {
     padding: 2rem;
 }
-
