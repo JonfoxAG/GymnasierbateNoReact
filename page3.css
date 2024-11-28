@@ -1,8 +1,11 @@
+
+/* Global reset */
 * {
     margin: 0;
     padding: 0;
 }
 
+/* Main body styling */
 .main-body {
     width: 100%;
     display: flex;
@@ -11,6 +14,7 @@
     flex-direction: column;
 }
 
+/* Default box styling */
 .box {
     height: 10rem;
     width: 20rem;
@@ -18,10 +22,10 @@
     display: inline-block;
     position: relative;
     overflow: hidden;
-    transition: height 0.3s ease;
-    transition: width 0.3s ease;
+    transition: height 0.3s ease, width 0.3s ease;
 }
 
+/* Different box colors */
 .box1 {
     background-color: green;
 }
@@ -36,8 +40,8 @@
 
 /* Expanded box style */
 .box.expanded {
-    height: 20rem; /* New height when expanded */
-    width: 30rem; /** New width when expanded **/
+    height: 20rem;
+    width: 30rem;
 }
 
 /* Hidden content initially */
@@ -53,6 +57,7 @@
     display: block;
 }
 
+/* Button styling */
 button {
     position: absolute;
     bottom: 0.5rem;
@@ -60,4 +65,25 @@ button {
     padding: 0.5rem;
     font-size: 0.9rem;
     cursor: pointer;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .box {
+        width: 90%; /* Reduce width for smaller screens */
+        margin: 1rem 0;
+    }
+
+    .box.expanded {
+        width: 90%; /* Keep the width same as default box */
+        height: 30rem; /* Expand more vertically */
+    }
+
+    button {
+        font-size: 0.8rem; /* Adjust button size */
+    }
+
+    .content {
+        font-size: 0.9rem; /* Adjust content font size */
+    }
 }
