@@ -4,6 +4,7 @@
     padding: 0;
 }
 
+
 /* Main body styling */
 .main-body {
     width: 100%;
@@ -22,32 +23,37 @@
     position: relative;
     overflow: hidden;
     transition: height 0.3s ease, width 0.3s ease;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 1.5rem;
 }
 
 /* Different box colors */
 .box1 {
-    background-color: green;
+    border: 1px solid black;
 }
 
 .box2 {
-    background-color: yellow;
+    border: 1px solid black;
 }
 
 .box3 {
-    background-color: blue;
+    border: 1px solid black;
 }
 
 /* Expanded box style */
 .box.expanded {
     height: 20rem;
-    width: 30rem;
+    width: 50rem;
 }
 
 /* Hidden content initially */
 .content {
     display: none;
     padding: 1rem;
-    color: white;
+    color: black;
     font-size: 1rem;
 }
 
