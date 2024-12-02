@@ -27,6 +27,17 @@
     text-align: center;
 }
 
+h {
+    font-size: 2rem;
+    margin: auto;
+}
+
+.header {
+    margin: auto;
+    padding-top: 5rem;
+    text-align: center;
+}
+
 h1 {
     margin-top: 1.5rem;
 }
